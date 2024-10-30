@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head> 
+    <title>HTML TABLE TUTORIAL</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css" type="text/css">
+        <style>
+        /* Copy Button Styling */
+        .copyy-btn {
+                    margin-left: 69%;
+                    position: absolute;
+                    top: 10px;   /* Top alignment */
+                    left: 10px;  /* Left alignment */
+                    padding: 5px 10px;
+                    background-color: #007bff;
+                    color: white;
+                    border: none;
+                    border-radius: 5px;
+                    cursor: pointer;
+                }
+
+                .copyy-btn.copied {
+                    margin-left: 67%;
+                    background-color: #28a745;
+                }
+                .second table {
+                    width: 60%;
+                    border-collapse: collapse;
+                    margin-bottom: 20px;
+                }
+
+                .second th, td {
+                    padding: 15px;
+                    text-align: left;
+                    border: 1px solid black;
+                }
+
+                .second th {
+                    background-color: #f8f9fa;
+                    font-weight: bold;
+                }
+
+                .second tr:nth-child(even) {
+                    background-color: #f2f2f2;
+                }
+
+                .second tr:hover {
+                    background-color: #e9ecef;
+                }
+
+    </style>
+
+  </head>
+ 
+  <body>
+  <div class="right-sidebar">ADVERTISEMENT</div>
+
+<div class="aside">
+  <div class="logo">
+    <h1>Html</h1> 
+    <h1>Table</h1>
+  </div>
+  
+  
+  <ul class="nav">
+    <a href="index.html">Html Table</a></li>
+    <a href="Table Header.html">Table Header</a></li>
+    <a href="Table Borders.html">Table Borders</a></li>
+    <a href="Table Caption.html">Table Caption</a></li>
+    <a href="Rowspan and Colspan.html">Rowspan and Colspan</a></li>
+    <a href="responsive table.html">Responsive Table</a></li>
+ 
+  </ul>    
+</div>
+
+    <h1>Responsive Tables Example</h1>
+    <h4>This example demonstrates how to make tables responsive, ensuring readability on small screens.</h4>
+
+    <!-- Responsive Table -->
+    <div class="second">
+          <table>
+            <tr>
+              <th>Name</th>
+              <th>Age</th>
+              <th>Location</th>
+            </tr>
+            <tr>
+              <td>John</td>
+              <td>30</td>
+              <td>New York</td>
+            </tr>
+            <tr>
+              <td>Mary</td>
+              <td>25</td>
+              <td>Los Angeles</td>
+            </tr>
+          </table>
+          </div>
+
+          <!-- The code box -->
+          <h3>HTML and CSS Code:</h3>
+          <div style="position: relative;">
+            <pre id="code-box">
+          <code>&lt;!DOCTYPE html&gt;
+          &lt;<span class="keyword">html</span> lang="en"&gt;
+          &lt;<span class="keyword">head</span>&gt;
+            &lt;<span class="keyword">meta</span> charset="UTF-8"&gt;
+            &lt;<span class="keyword">meta</span> name="viewport" content="width=device-width, initial-scale=1.0"&gt;
+            &lt;<span class="keyword">title</span>&gt;Table Styling&lt;/<span class="keyword">title</span>&gt;
+            &lt;<span class="keyword">style</span>&gt;
+              table {
+                width: 60%;
+                border-collapse: collapse;
+              }
+              th, td {
+                padding: 15px;
+                text-align: left;
+                border: 1px solid black;
+              }
+              th {
+                background-color: #f8f9fa;
+                font-weight: bold;
+              }
+              tr:nth-child(even) {
+                background-color: #f2f2f2;
+              }
+              tr:hover {
+                background-color: #e9ecef;
+              }
+            &lt;/<span class="keyword">style</span>&gt;
+          &lt;/<span class="keyword">head</span>&gt;
+          &lt;<span class="keyword">body</span>&gt;
+            &lt;<span class="keyword">table</span>&gt;
+              &lt;<span class="keyword">tr</span>&gt;
+                &lt;<span class="keyword">th</span>&gt;Name&lt;/<span class="keyword">th</span>&gt;
+                &lt;<span class="keyword">th</span>&gt;Age&lt;/<span class="keyword">th</span>&gt;
+                &lt;<span class="keyword">th</span>&gt;Location&lt;/<span class="keyword">th</span>&gt;
+              &lt;/<span class="keyword">tr</span>&gt;
+              &lt;<span class="keyword">tr</span>&gt;
+                &lt;<span class="keyword">td</span>&gt;John&lt;/<span class="keyword">td</span>&gt;
+                &lt;<span class="keyword">td</span>&gt;30&lt;/<span class="keyword">td</span>&gt;
+                &lt;<span class="keyword">td</span>&gt;New York&lt;/<span class="keyword">td</span>&gt;
+              &lt;/<span class="keyword">tr</span>&gt;
+              &lt;<span class="keyword">tr</span>&gt;
+                &lt;<span class="keyword">td</span>&gt;Mary&lt;/<span class="keyword">td</span>&gt;
+                &lt;<span class="keyword">td</span>&gt;25&lt;/<span class="keyword">td</span>&gt;
+                &lt;<span class="keyword">td</span>&gt;Los Angeles&lt;/<span class="keyword">td</span>&gt;
+              &lt;/<span class="keyword">tr</span>&gt;
+            &lt;/<span class="keyword">table</span>&gt;
+          &lt;/<span class="keyword">body</span>&gt;
+          &lt;/<span class="keyword">html</span>&gt;
+          </code>
+            </pre>
+
+  <!-- Copy button -->
+  <button class="copyy-btn" id="copyy-btn">Copy</button>
+</div>
+
+<script>
+    // Copy to clipboard
+    document.getElementById('copyy-btn').addEventListener('click', function() {
+        const code = document.getElementById('code-box').innerText;
+        const textarea = document.createElement('textarea');
+        textarea.value = code;
+        document.body.appendChild(textarea);
+        textarea.select();
+        document.execCommand('copy');
+        document.body.removeChild(textarea);
+
+        // Change button text
+        this.textContent = 'Copied!';
+        this.classList.add('copied');
+
+        // Reset button text after 2 seconds
+        setTimeout(() => {
+            this.textContent = 'Copy';
+            this.classList.remove('copied');
+        }, 2000);
+    });
+</script>
+  </body>
+</html>

@@ -1,0 +1,329 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+<html>
+  <head> 
+    <title>HTML TABLE TUTORIAL</title>
+    <meta charset="utf-8">
+    <link rel='shortcut icon' href="images/logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css" type="text/css">
+    
+  </head>
+ 
+  <body> -->
+    <!-- <div class="right-sidebar">ADVERTISEMENT</div>
+
+    <div class="aside">
+      <div class="logo">
+        <h1>Html</h1> 
+        <h1>Table</h1>
+      </div>
+      
+      
+      <ul class="nav">
+        <li><a href="Table Header.html">Table Header</a></li>
+        <li><a href="Table Borders.html">Table Borders</a></li>
+        <li><a href="Table Caption.html">Table Caption</a></li>
+        <li><a href="Rowspan and Colspan.html">Rowspan and Colspan</a></li>
+     
+      </ul>    
+    </div> -->
+      <!-- <h1>HAPPY HOUR</h1>
+    
+       
+  
+
+    <script src="js/script.js"></script>
+    <script src="js/styleSwitcher.js"></script>
+  </body>
+</html> 
+
+  -->
+  <!DOCTYPE html>
+<html lang="en">
+<html>
+  <head> 
+    <title>HTML Table Rowspan and Colspan Tutorial</title>
+    <meta charset="utf-8">
+    <link rel='shortcut icon' href="images/logo.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="main.css" type="text/css">
+    <style>
+        /* Table Styling */
+        table {
+            width: 60%;
+            border-collapse: collapse;
+            margin-bottom: 20px;
+        }
+
+        table, th, td {
+            border: 2px solid black;
+        }
+
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007bff;
+            color: white;
+        }
+
+        /* Rowspan and Colspan Styling */
+        td[rowspan] {
+            background-color: #d63384;
+            color: white;
+            text-align: center;
+        }
+
+        td[colspan] {
+            background-color: #6c757d;
+            color: white;
+            text-align: center;
+        }
+
+        /* Code block styling */
+        pre {
+            background-color: #f4f4f4;
+            padding: 15px;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            overflow-x: auto;
+            position: relative;
+        }
+
+        code {
+            font-family: Consolas, monospace;
+            color: #d63384;
+        }
+
+        .keyword {
+            color: #007bff;
+        }
+
+        /* Copy Button Styling */
+        .copyy-btn {
+            margin-left: 69%;
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            padding: 5px 10px;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .copyy-btn.copied {
+            margin-left: 67%;
+            background-color: #28a745;
+        }
+    </style>
+  </head>
+ 
+  <body>
+    <div class="right-sidebar">ADVERTISEMENT</div>
+
+    <div class="aside">
+      <div class="logo">
+        <h1>Html</h1> 
+        <h1>Table</h1>
+       </div>
+      
+      <ul class="nav">
+      <a href="index.html">Html Table</a></li>
+    <a href="Table Header.html">Table Header</a></li>
+    <a href="Table Borders.html">Table Borders</a></li>
+    <a href="Table Caption.html">Table Caption</a></li>
+    <a href="Rowspan and Colspan.html">Rowspan and Colspan</a></li>
+    <a href="responsive table.html">Responsive Table</a></li>
+    </div>
+
+    <h1>Table Rowspan and Colspan</h1>
+    <h4>The <code>rowspan</code> and <code>colspan</code> attributes in HTML tables allow you to merge cells either vertically <br>
+    or horizontally. This tutorial demonstrates both features in separate tables.
+    </h4>
+
+    <h2>1. Table Rowspan</h2>
+    <!-- Table with Rowspan -->
+    <table>
+        <tr>
+            <th>Employee</th>
+            <th>Age</th>
+            <th>Department</th>
+        </tr>
+        <tr>
+            <td rowspan="2">John</td>
+            <td>30</td>
+            <td>Sales</td>
+        </tr>
+        <tr>
+            <td>30</td>
+            <td>Marketing</td>
+        </tr>
+    </table>
+
+    <h3>HTML and CSS Code for Rowspan:</h3>
+    <div style="position: relative;">
+        <pre id="rowspan-code-box">
+<code>&lt;!DOCTYPE html&gt;
+&lt;<span class="keyword">html</span>&gt;
+&lt;<span class="keyword">head</span>&gt;
+  &lt;<span class="keyword">style</span>&gt;
+    table {
+      width: 60%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 2px solid black;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+    td[rowspan] {
+      background-color: #d63384;
+      color: white;
+      text-align: center;
+    }
+  &lt;/<span class="keyword">style</span>&gt;
+&lt;/<span class="keyword">head</span>&gt;
+&lt;<span class="keyword">body</span>&gt;
+  &lt;<span class="keyword">table</span>&gt;
+    &lt;<span class="keyword">tr</span>&gt;
+      &lt;<span class="keyword">th</span>&gt;Employee&lt;/<span class="keyword">th</span>&gt;
+      &lt;<span class="keyword">th</span>&gt;Age&lt;/<span class="keyword">th</span>&gt;
+      &lt;<span class="keyword">th</span>&gt;Department&lt;/<span class="keyword">th</span>&gt;
+    &lt;/<span class="keyword">tr</span>&gt;
+    &lt;<span class="keyword">tr</span>&gt;
+      &lt;<span class="keyword">td</span> rowspan="<span class="keyword">2</span>"&gt;John&lt;/<span class="keyword">td</span>&gt;
+      &lt;<span class="keyword">td</span>&gt;30&lt;/<span class="keyword">td</span>&gt;
+      &lt;<span class="keyword">td</span>&gt;Sales&lt;/<span class="keyword">td</span>&gt;
+    &lt;/<span class="keyword">tr</span>&gt;
+    &lt;<span class="keyword">tr</span>&gt;
+      &lt;<span class="keyword">td</span>&gt;30&lt;/<span class="keyword">td</span>&gt;
+      &lt;<span class="keyword">td</span>&gt;Marketing&lt;/<span class="keyword">td</span>&gt;
+    &lt;/<span class="keyword">tr</span>&gt;
+  &lt;/<span class="keyword">table</span>&gt;
+&lt;/<span class="keyword">body</span>&gt;
+&lt;/<span class="keyword">html</span>&gt;
+</code>
+        </pre>
+
+        <!-- Copy button for Rowspan -->
+        <button class="copyy-btn" id="rowspan-copy-btn">Copy</button>
+    </div>
+
+    <h2>2. Table Colspan</h2>
+    <!-- Table with Colspan -->
+    <table>
+        <tr>
+            <th>Employee</th>
+            <th>Age</th>
+            <th>Department</th>
+        </tr>
+        <tr>
+            <td>Mary</td>
+            <td colspan="2">Human Resources</td>
+        </tr>
+        <tr>
+            <td>Steve</td>
+            <td>28</td>
+            <td>Finance</td>
+        </tr>
+    </table>
+
+    <h3>HTML and CSS Code for Colspan:</h3>
+    <div style="position: relative;">
+        <pre id="colspan-code-box">
+<code>&lt;!DOCTYPE html&gt;
+&lt;<span class="keyword">html</span>&gt;
+&lt;<span class="keyword">head</span>&gt;
+  &lt;<span class="keyword">style</span>&gt;
+    table {
+      width: 60%;
+      border-collapse: collapse;
+    }
+    table, th, td {
+      border: 2px solid black;
+    }
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #007bff;
+      color: white;
+    }
+    td[colspan] {
+      background-color: #6c757d;
+      color: white;
+      text-align: center;
+    }
+  &lt;/<span class="keyword">style</span>&gt;
+&lt;/<span class="keyword">head</span>&gt;
+&lt;<span class="keyword">body</span>&gt;
+  &lt;<span class="keyword">table</span>&gt;
+    &lt;<span class="keyword">tr</span>&gt;
+      &lt;<span class="keyword">th</span>&gt;Employee&lt;/<span class="keyword">th</span>&gt;
+      &lt;<span class="keyword">th</span>&gt;Age&lt;/<span class="keyword">th</span>&gt;
+      &lt;<span class="keyword">th</span>&gt;Department&lt;/<span class="keyword">th</span>&gt;
+    &lt;/<span class="keyword">tr</span>&gt;
+    &lt;<span class="keyword">tr</span>&gt;
+      &lt;<span class="keyword">td</span>&gt;Mary&lt;/<span class="keyword">td</span>&gt;
+      &lt;<span class="keyword">td</span> colspan="<span class="keyword">2</span>"&gt;Human Resources&lt;/<span class="keyword">td</span>&gt;
+    &lt;/<span class="keyword">tr</span>&gt;
+    &lt;<span class="keyword">tr</span>&gt;
+      &lt;<span class="keyword">td</span>&gt;Steve&lt;/<span class="keyword">td</span>&gt;
+      &lt;<span class="keyword">td</span>&gt;28&lt;/<span class="keyword">td</span>&gt;
+      &lt;<span class="keyword">td</span>&gt;Finance&lt;/<span class="keyword">td</span>&gt;
+    &lt;/<span class="keyword">tr</span>&gt;
+  &lt;/<span class="keyword">table</span>&gt;
+&lt;/<span class="keyword">body</span>&gt;
+&lt;/<span class="keyword">html</span>&gt;
+</code>
+        </pre>
+
+        <!-- Copy button for Colspan -->
+        <button class="copyy-btn" id="colspan-copy-btn">Copy</button>
+    </div>
+
+    <script>
+        // Copy functionality for Rowspan
+        document.getElementById('rowspan-copy-btn').addEventListener('click', function() {
+            var codeBox = document.getElementById('rowspan-code-box');
+            var codeText = codeBox.innerText;
+            navigator.clipboard.writeText(codeText).then(function() {
+                var btn = document.getElementById('rowspan-copy-btn');
+                btn.textContent = 'Copied!';
+                btn.classList.add('copied');
+                setTimeout(function() {
+                    btn.textContent = 'Copy';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        });
+
+        // Copy functionality for Colspan
+        document.getElementById('colspan-copy-btn').addEventListener('click', function() {
+            var codeBox = document.getElementById('colspan-code-box');
+            var codeText = codeBox.innerText;
+            navigator.clipboard.writeText(codeText).then(function() {
+                var btn = document.getElementById('colspan-copy-btn');
+                btn.textContent = 'Copied!';
+                btn.classList.add('copied');
+                setTimeout(function() {
+                    btn.textContent = 'Copy';
+                    btn.classList.remove('copied');
+                }, 2000);
+            });
+        });
+    </script>
+  </body>
+</html>
